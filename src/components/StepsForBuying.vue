@@ -8,7 +8,7 @@
         <h4 class="fw-bold">
           {{ step.title }}
         </h4>
-        <p class="description-font-size">
+        <p class="fs-5">
           {{ step.description }} <br/>
           <span class="fw-bold">
             {{ step.napomena }}
@@ -58,6 +58,4 @@ li::marker {
   font-size: 1.4375rem;
   font-weight: bold;
 }
-
-
 </style>

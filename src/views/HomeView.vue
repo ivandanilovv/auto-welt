@@ -2,9 +2,9 @@
   <main class="container py-5">
     <intro/>
     <steps-for-buying/>
-    <fizicki-lica/>
+    <physical-person/>
     <hr/>
-    <pravni-lica/>
+    <juridical-person/>
   </main>
 </template>
 
@@ -12,16 +12,16 @@
 // @ is an alias to /src
 
 import Intro from "@/components/Intro";
-import PravniLica from "@/components/PravniLica";
-import FizickiLica from "@/components/FizickiLica";
 import StepsForBuying from "@/components/StepsForBuying";
+import PhysicalPerson from "@/components/PhysicalPerson";
+import JuridicalPerson from "@/components/JuridicalPerson";
 
 export default {
   components: {
     Intro,
-    PravniLica,
-    FizickiLica,
     StepsForBuying,
+    PhysicalPerson,
+    JuridicalPerson,
   }
 }
 </script>
