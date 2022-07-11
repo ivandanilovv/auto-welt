@@ -16,16 +16,16 @@
 // @ is an alias to /src
 
 import Intro from "@/components/Intro";
-import StepsForBuying from "@/components/StepsForBuying";
-import FizickiLica from "@/components/FizickiLica";
 import PravniLica from "@/components/PravniLica";
+import FizickiLica from "@/components/FizickiLica";
+import StepsForBuying from "@/components/StepsForBuying";
 
 export default {
   components: {
+    Intro,
     PravniLica,
     FizickiLica,
     StepsForBuying,
-    Intro
   }
 }
 </script>

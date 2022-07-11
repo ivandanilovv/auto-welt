@@ -55,7 +55,7 @@ export default {
 
 <style scoped>
 li::marker {
-  font-size: 23px;
+  font-size: 1.4375rem;
   font-weight: bold;
 }
 

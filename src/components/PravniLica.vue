@@ -10,7 +10,7 @@
     <ul>
       <li v-for="doc in documents" class="description-font-size">
         {{ doc.text }}
-        <a :href="[doc.linkURL]" target="_blank">{{doc.linkText}}</a>
+        <a :href="[doc.linkURL]" target="_blank">{{ doc.linkText }}</a>
       </li>
     </ul>
     <p class="description-font-size">
@@ -68,7 +68,7 @@ export default {
 </script>
 
 <style scoped>
-.napomena-color{
+.napomena-color {
   color: red;
 }
 </style>
