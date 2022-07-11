@@ -7,12 +7,10 @@
       Со пополнето барање за одобрување на лизинг, <strong>профактура на добавувачот</strong> и <strong>прифатена лизинг
       понуда</strong>, потребно е да се приложат и:
     </p>
-    <ul>
-      <li v-for="doc in documents" class="description-font-size">
-        {{ doc.text }}
-        <a :href="[doc.linkURL]" target="_blank">{{ doc.linkText }}</a>
-      </li>
+    <ul v-for="doc in documents" class="mb-0">
+      <span v-html="doc.text"></span>
     </ul>
+    <br>
     <strong>
       <p class="description-font-size">
         Документација треба да биде заверена со потпис и печат на овластеното лице!
@@ -32,40 +30,45 @@ export default {
     return {
       documents: [
         {
-          text: 'ПРОФАКТУРА'
+          text: `<li class="description-font-size">
+                    ПРОФАКТУРА</li>`
         },
         {
-          text: 'БАРАЊЕ за одобрување на лизинг ',
-          linkText: '(превземи барање)',
-          linkURL: 'https://s-leasing.mk/content/%D0%91%D0%B0%D1%80%D0%B0%D1%9A%D0%B5%20%D0%B7%D0%B0%20%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D1%83%D0%B2%D0%B0%D1%9A%D0%B5%20%D0%BD%D0%B0%20%D0%BB%D0%B8%D0%B7%D0%B8%D0%BD%D0%B3-Fizicki%20Lica.pdf'
+          text: `<li class="description-font-size">
+                    БАРАЊЕ за одобрување на лизинг <a href="https://s-leasing.mk/content/%D0%91%D0%B0%D1%80%D0%B0%D1%9A%D0%B5%20%D0%B7%D0%B0%20%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D1%83%D0%B2%D0%B0%D1%9A%D0%B5%20%D0%BD%D0%B0%20%D0%BB%D0%B8%D0%B7%D0%B8%D0%BD%D0%B3-Fizicki%20Lica.pdf" target="_blank">
+                    <strong>(превземи барање)</strong></a></li>`
         },
         {
-          text: 'Копија од ЛИЧНА КАРТА'
+          text: `<li class="description-font-size">
+                    Копија од ЛИЧНА КАРТА</li>`
         },
         {
-          text: 'ПОТВРДА од работодавецот за редовен работен однос'
+          text: `<li class="description-font-size">
+                    ПОТВРДА од работодавецот за редовен работен однос</li>`
         },
         {
-          text: 'Административна забрана од плата од работодавецот ',
-          linkText: '(превземи Административна забрана)',
-          linkURL: 'https://s-leasing.mk/content/%D0%90%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D0%B0%20%D0%B7%D0%B0%D0%B1%D1%80%D0%B0%D0%BD%D0%B0%20%D0%BE%D0%B4%20%D0%BF%D0%BB%D0%B0%D1%82%D0%B0%20%D0%BE%D0%B4%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BE%D0%B4%D0%B0%D0%B2%D0%B5%D1%86%D0%BE%D1%82%20%D0%B2%D0%BE%20%D0%BA%D0%BE%D1%80%D0%B8%D1%81%D1%82%20%D0%BD%D0%B0%20%D0%A8%D0%9F%D0%90%D0%A0%D0%9A%D0%90%D0%A1%D0%95%20%D0%9B%D0%98%D0%97%D0%98%D0%9D%D0%93%20%D0%94%D0%9E%D0%9E%20%D0%A1%D0%BA%D0%BE%D0%BF%D1%98%D0%B5.pdf'
+          text: `<li class="description-font-size">
+                    Административна забрана од плата од работодавецот <a href="https://s-leasing.mk/content/%D0%90%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D0%B0%20%D0%B7%D0%B0%D0%B1%D1%80%D0%B0%D0%BD%D0%B0%20%D0%BE%D0%B4%20%D0%BF%D0%BB%D0%B0%D1%82%D0%B0%20%D0%BE%D0%B4%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BE%D0%B4%D0%B0%D0%B2%D0%B5%D1%86%D0%BE%D1%82%20%D0%B2%D0%BE%20%D0%BA%D0%BE%D1%80%D0%B8%D1%81%D1%82%20%D0%BD%D0%B0%20%D0%A8%D0%9F%D0%90%D0%A0%D0%9A%D0%90%D0%A1%D0%95%20%D0%9B%D0%98%D0%97%D0%98%D0%9D%D0%93%20%D0%94%D0%9E%D0%9E%20%D0%A1%D0%BA%D0%BE%D0%BF%D1%98%D0%B5.pdf" target="_blank">
+                    <strong>(превземи барање)</strong></a></li>`
         },
         {
-          text: 'ИЗЈАВА за редовна отплата ',
-          linkText: '(превземи Изјава)',
-          linkURL: 'https://s-leasing.mk/content/%D0%98%D0%B7%D1%98%D0%B0%D0%B2%D0%B0%20%D0%B7%D0%B0%20%D1%80%D0%B5%D0%B4%D0%BE%D0%B2%D0%BD%D0%B0%20%D0%BE%D1%82%D0%BF%D0%BB%D0%B0%D1%82%D0%B0.pdf'
+          text: `<li class="description-font-size">
+                    ИЗЈАВА за редовна отплата <a href="https://s-leasing.mk/content/%D0%98%D0%B7%D1%98%D0%B0%D0%B2%D0%B0%20%D0%B7%D0%B0%20%D1%80%D0%B5%D0%B4%D0%BE%D0%B2%D0%BD%D0%B0%20%D0%BE%D1%82%D0%BF%D0%BB%D0%B0%D1%82%D0%B0.pdf" target="_blank">
+                    <strong>(превземи барање)</strong></a></li>`
         },
         {
-          text: 'Годишна даночна пријава (доколку барателот остварува дополнителни приходи)'
+          text: `<li class="description-font-size">
+                    Годишна даночна пријава (доколку барателот остварува дополнителни приходи)</li>`
         },
         {
-          text: 'Декларации за прием за бруто плата за последните 3 месеци'
+          text: `<li class="description-font-size">
+                    Декларации за прием за бруто плата за последните 3 месеци</li>`
         },
         {
-          text: 'СОГЛАСНОСТ за извадок од Македонско Кредитно Биро ',
-          linkText: '(превземи согласност)',
-          linkURL: 'https://s-leasing.mk/content/%D0%A1%D0%BE%D0%B3%D0%BB%D0%B0%D1%81%D0%BD%D0%BE%D1%81%D1%82%20%D0%B7%D0%B0%20%D0%B8%D0%B7%D0%B2%D0%B0%D0%B4%D0%BE%D0%BA%20%D0%BE%D0%B4%20%D0%9C%D0%B0%D0%BA%D0%B5%D0%B4%D0%BE%D0%BD%D1%81%D0%BA%D0%BE%20%D0%9A%D1%80%D0%B5%D0%B4%D0%B8%D1%82%D0%BD%D0%BE%20%D0%91%D0%B8%D1%80%D0%BE.pdf'
-        }
+          text: `<li class="description-font-size">
+                    СОГЛАСНОСТ за извадок од Македонско Кредитно Биро <a href="https://s-leasing.mk/content/%D0%A1%D0%BE%D0%B3%D0%BB%D0%B0%D1%81%D0%BD%D0%BE%D1%81%D1%82%20%D0%B7%D0%B0%20%D0%B8%D0%B7%D0%B2%D0%B0%D0%B4%D0%BE%D0%BA%20%D0%BE%D0%B4%20%D0%9C%D0%B0%D0%BA%D0%B5%D0%B4%D0%BE%D0%BD%D1%81%D0%BA%D0%BE%20%D0%9A%D1%80%D0%B5%D0%B4%D0%B8%D1%82%D0%BD%D0%BE%20%D0%91%D0%B8%D1%80%D0%BE.pdf" target="_blank">
+                    <strong>(превземи согласност)</strong></a></li>`
+        },
       ]
     }
   }
