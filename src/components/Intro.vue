@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="d-flex justify-content-center ratio ratio-131x108">
+    <div class="d-flex justify-content-center ratio ratio-11x9">
       <img src="../assets/images/steps.jpg" alt="Image1"/>
     </div>
     <p align="left" class="mt-5 description-font-size">
